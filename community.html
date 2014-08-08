@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Northstream Deutschland - Community</title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+        $(".pane-list li").click(function(){
+    	window.location=$(this).find("a").attr("href");return false;
+	});
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.rss').append('<span class="hover"></span>').each(function () {
+	  var $span = $('> span.hover', this).css('opacity', 0);
+	  $(this).hover(function () {
+	    $span.stop().fadeTo(500, 1);
+	  }, function () {
+	    $span.stop().fadeTo(500, 0);
+	  });
+	});
+	
+	$('.facebook').append('<span class="hover"></span>').each(function () {
+	  var $span = $('> span.hover', this).css('opacity', 0);
+	  $(this).hover(function () {
+	    $span.stop().fadeTo(500, 1);
+	  }, function () {
+	    $span.stop().fadeTo(500, 0);
+	  });
+	});
+		
+	$('.twitter').append('<span class="hover"></span>').each(function () {
+	  var $span = $('> span.hover', this).css('opacity', 0);
+	  $(this).hover(function () {
+	    $span.stop().fadeTo(500, 1);
+	  }, function () {
+	    $span.stop().fadeTo(500, 0);
+	  });
+	});
+						
+});
+</script>
+<script type="text/javascript" language="javascript">
+function decmail(coded, key)
+{
+  var shift=coded.length;
+  var dectext="";
+  for (i=0; i<coded.length; i++) {
+    if (key.indexOf(coded.charAt(i))==-1) {
+      ltr = coded.charAt(i);
+      dectext+= (ltr);
+    }
+    else {     
+      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;
+      dectext+= (key.charAt(ltr));
+    }
+  }
+  return dectext;
+}
+
+var logintimer;
+function ShowMessage(msg, status)
+{
+  $('#login-status').addClass(status);
+  $('#login-status').text(msg);
+  if (status=='failed') $('#pw').val('');
+  setTimeout("$('#login-status').removeClass(status).text('');", 5000)
+  clearTimeout(logintimer);
+}
+
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-513213-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" width="140" height="40" alt="logo" /></a></div>
+
+<div id="nav">
+<ul>
+   <li><a class="nav_home" href="index.html">Startseite</a><span class="nav_text nav_home">Willkommen</span></li>
+   <li><a class="nav_products" href="products.html">Produkte</a><span class="nav_text nav_home">Unser Angebot</span></li>
+   <li><a class="nav_community" href="community.html">Community</a><span class="nav_text nav_community">Open Source</span></li>
+   <li><a class="nav_legal" href="legal.html">Kontakt</a><span class="nav_text nav_legal">Impressum</span></li>
+   <li><a class="nav_customer" href="customer.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
+</ul>
+</div><!-- close nav -->
+
+
+
+<div id="left">
+<h2>Open Source</h2>
+
+<p>Northstream Deutschland unterstützt die Open Source Idee sowohl finanziell, wie auch mit Entwicklungskapazitäten. Wir ermutigen unsere Mitarbeiter sich an Open Source Projekten zu beteiligen, bzw. eigene Open Source Projekte ins Leben zu rufen. Ein Projekt, welches von einigen unserer Mitarbeiter gegründet und kontinuierlich weiterentwickelt wird, ist die  Programmbibliothek <a href="#library">Geoutility Library</a> (s. u.). <br /> 
+Wir sind der Überzeugung, dass beide Paradigmen, Open und Closed Source, ihre Berechtigung haben. Es gilt die Vor- und Nachteile beider Ansätze zu evaluieren, eine ideologische Festlegung auf ein Paradigma ist sollte auf jeden Fall vermieden werden. Die Erfahrung einiger Unternehmen sowie öffentlicher Verwaltungen, die einseitig auf Open Source Lösungen setzten und scheiterten (z. B. das Bumdesministerium des Äußeren der Bundesrepublik Deutschland) sind ebenso falsch wie das einseitige Beharren auf Closed Source Produkte, weil dadurch einige Einsparpotentiale vergeben werden.</p>
+
+<h2>Open Source Aktivitäten</h2>
+
+<p>Northstream Deutschland unterstützt in unterschiedlicher Form Open Source Projekte als Administratoren, Projektmanager, Software-Entwickler oder mit finanziellen Mitteln. Unter anderem werden die bekannten OS-Projekte <a href="http://glassfish.java.net" target="_blank">Glassfish Server</a> (JavaEE basierter Anwendungsserver), <a href="http://maven.apache.org/" target="_blank">Apache Maven</a> (Management Tool für Software-Projekte) oder <a href="http://nuget.codeplex.com/" target="_blank">NuGet</a> (Package Management System für die Entwicklung) von uns unterstützt.</p>
+
+<a name="library"></a>
+<h3>Geoutility Library</h3>
+
+<p>Eines unserer populärsten Open Source Projekte ist die Programmbibliothek Geoutility Library. Sie wird auf der bekannten OS-Plattform Codeplex (<a href="http://geoutility.codeplex.com" target="_top">http://geoutility.codeplex.com</a>) gehostet. Sie hat bereits mehr als 200.000 Downloads zu verzeichnen, und belegt aktuell einen Rang in den TOP20 der Download-Statistik.<br />
+Die Programmbibliothek verarbeitet Satellitendaten und Satellitenbilder bzw. Luftbilder verschiedener Anbieter, führt Berechnungen mit diesen Daten aus und stellt Beziehungen zu geographischen Koordinaten her. Die Bibliothek wurde ursprünglich im Rahmen eines Forschungsprojekts im Auftrag des Fraunhofer Instituts entwickelt. Auf dem Markt war kein Produkt erhältlich und damit entschlossen wir uns zur Eigenentwicklung. Im Jahr 2009 wurde die Bibliothek als Teil des Gesamtprojekts in eine Open Source Lizenz überführt und veröffentlicht. Wir verwenden die Bibliothek selbst in einigen weiteren Entwicklungsprojekten. Damit ist sichergestellt, dass neuere Entwicklungen ständig in die Evolution einfließen und auch die Open Source Gemeinde weiterhin davon profitieren kann.</p>
+
+<p>Die Geoutility Library ist auf Windows, Linux und Apple Rechnern, sowie den meisten Smartphones lauffähig. Sie können auf der <a href="http://geoutility.codeplex.com/Downloads" target="_top">Codeplex-Website</a> eine kleine Testanwendung oder die Bibliothek herunterladen. Bitte beachten Sie die Lizenzbedingungen.</p>
+
+</div><!-- close left -->
+
+<div id="right">
+
+<h3>Kurzmitteilungen</h3>
+
+<ul class="pane-list">
+
+<li><img src="images/thumb1.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Sicherheitskritische Anwendung für Smartphones und Mobile Devices</h2>
+<p class="product_text">Northstream entwickelt neuartige sicherheitskritische Gesichtserkennungsanwendung für Smartphones..</p>
+</li>
+
+<li><img src="images/thumb2.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Rekordumsatz im 4. Quartal 2012</h2>
+<p class="product_text">Northstream Deutschland hat das 4. Quartal 2012 er&shy;neut mit einem neuen Konzern-Rekordumsatz und Gewinn ab&shy;geschlossen.</p>
+</li>
+
+<li><img src="images/thumb3.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Volkswagen vergibt Forschungsauftrag</h2>
+<p class="product_text">Der Volkswagen-Konzern in Wolfsburg hat eine Mach&shy;bar&shy;keits&shy;studie für ein Geo-Tracking Verfahren in Auftrag gegeben.</p>
+</li>
+
+</ul>
+
+<h3>Get In Touch</h3>
+<div id="contact_container">
+<span>Contact Customer Care Service</span><br />
+<script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
+<span>News &amp; Press Information Service</span><br />
+<script type="text/javascript">var link=decmail("4Y-ts4qYF3s1F@18YFLPFYsq3.ts","hSJciRU2Wmutpf17oG0kBzs5NZIjLQOarlbwD3yF4VH98dgvnKPEMCX6eTxqYA");var text=decmail("VTod6i 7cdOj6nFp qc4OEjbcFj","a0hu3wjP2WXIiqEdkCnZeSv1G4bOLzTNRsVYx9U6gtfKAF8cDrl5BoyMJQH7pm");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations Department</noscript><br /><br />
+<span>Job offers &amp; Recruitment</span><br />
+<script type="text/javascript">var link=decmail("LZH-qZYnLWKZpW@pyLW3uWLZnK.qZ","PAMpftVadwL3TQZbBci4S7NlJomuOv0xY9WGnqRF6U8rhgHeEDjkz2yKIX15sC");var text=decmail("Yw9ZMzv6w3v rwhNZv6w3v","OxI5zjVFY794H3pSWD1mdTQUAlBaG8tJoqKehfurk6gCisL2RNc0vnEPywbXMZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment Department</noscript><br /><br />
+<span>Senior Technical Lead</span><br />
+<script type="text/javascript">var link=decmail("cz0tt0L.UNE09F0UI@Ly9zUcz90NF.u0","eZnAKV6yEruPsaRXMlHkmY4thjSCG5Q10qLgvobpd9DOcNWi2IT7FfBzU8Jwx3");var text=decmail("oK. 3v5665Y B. CHW5Kc5nP","YaVqJ7BdO3tmpWhx0UlejozgLHw2Af4uQrvcyTnXNEP5GkIS9CFbs61RiK8MDZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Contact our Technical Lead</noscript><br /><br />
+</div><!-- close form_container -->
+
+<h3>Customer Login</h3>
+
+<div id="form_container">
+<form action="clogin.html" target="iflogin" method="post" id="commentform">
+<fieldset>
+
+<p><input type="text" name="email" id="email" class="input_bg" value="" size="22" tabindex="1" />
+<label for="email"><small>Email</small></label></p>
+
+<p><input type="password" name="pw" id="pw" class="input_bg" value="" size="22" tabindex="2" />
+<label for="pw"><small>Password</small></label></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="$('#login-status').text('Try to login. Please wait ...');logintimer=setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 20000);" /><span id="login-status"></span></p>
+
+</fieldset>
+</form>
+<iframe id="iflogin" name="iflogin" frameborder="0" width="0" height="0"></iframe>
+</div><!-- close form_container -->
+
+
+</div><!-- close right -->
+
+
+</div><!-- close container -->
+
+<div id="footer"><a href="legal.html#top">Impressum</a>&nbsp;|&nbsp;<a href="legal.html#privacy">Datenschutz</a>&nbsp;|&nbsp;<a href="legal.html#terms">Nutzungsbedingungen</a>
+
+<div id="sharethis">
+
+		<ul>
+			<li><a href="http://www.twitter.com/northstream_de" target="_blank" class="twitter"><span>Northstream Deutschland on Twitter</span></a></li>
+            <li><a href="http://www.facebook.com/pages/Northstream-Deutschland/207486562630493" target="_blank" class="facebook"><span>Northstream Deutschland on Facebook</span></a></li>
+            <li><a href="feed.rss" title="Northstream Deutschland News-Feed" rel="alternate" type="application/rss+xml" class="rss"><span>RSS feed</span></a></li>
+		</ul>
+</div>
+
+</div>
+
+</body>
+</html>
