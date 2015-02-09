@@ -78,11 +78,10 @@ function decmail(coded, key)
 var logintimer;
 function ShowMessage(msg, status)
 {
-  $('#login-status').addClass(status);
-  $('#login-status').text(msg);
+  $('#login-status').addClass(status).text(msg);
   if (status=='failed') $('#pw').val('');
-  setTimeout("$('#login-status').removeClass(status).text('');", 5000)
-  clearTimeout(logintimer);
+  logintimer = setTimeout("$('#login-status').removeClass(status).text('');", 5000)
+  //clearTimeout(logintimer);
 }
 </script>
 
@@ -113,9 +112,9 @@ function ShowMessage(msg, status)
 <ul>
    <li><a class="nav_home" href="index.html">Startseite</a><span class="nav_text nav_home">Willkommen</span></li>
    <li><a class="nav_products" href="products.html">Produkte</a><span class="nav_text nav_home">Unser Angebot</span></li>
-   <li><a class="nav_service" href="service.html">Services</a><span class="nav_text nav_service">Hosted-BPI</span></li>
+   <li><a class="nav_service" href="services.html">Services</a><span class="nav_text nav_service">Dienstleistung</span></li>
    <li><a class="nav_legal" href="legal.html">Kontakt</a><span class="nav_text nav_legal">Impressum</span></li>
-   <li><a class="nav_customer" href="customer.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
+   <li><a class="nav_customer" href="customers.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
 </ul>
 <div id="logo"><a href="index.html">
 	<img src="images/logo.png" width="140" height="40" alt="logo" /></a></div>
@@ -128,20 +127,21 @@ function ShowMessage(msg, status)
 <ul id="slider1Content">
 
 <li class="slider1Image">
-<img src="images/photo1.jpg" alt="1" />
-<span class="right"><h2>Cutting Edge</h2>Die Automobilbranche gehört ebenso zu unseren Kunden wie viele namhafte mittelständische Unternehmen und öffentliche Auftraggeber. Sie alle Vertrauen unserer Fähigkeit IT-Trends zu evaluieren und neueste Software-Technologien zu planen und zu entwickeln. Unsere Kunden erwarten High-End Lösungen. So entwickeln wir im Auftrag unserer Kunden beispielsweise Anwendungen zur Muster- oder Gesichtserkennung auf mobilen Endgeräten. Anwendungen aus dem Bereich der Bioinformatik gehören ebenso zum Spektrum unserer Möglich&shy;keiten wie auch individuelle Cloud Computing Lösungen. Fragen Sie uns.<br /><br /><a href="products.html">Weiterlesen &raquo;</a></span> </li>
+    <img src="images/photo1.jpg" alt="1" />
+    <span class="right"><h2>Cutting Edge</h2>Nationale und internationale Konzerne geh&ouml;ren ebenso zu unseren Kunden wie viele namhafte mittelst&auml;ndische Unternehmen und &ouml;ffentliche Auftraggeber. Sie alle Vertrauen unserer F&auml;higkeit IT-Trends zu evaluieren und neueste Software-Technologien zu planen und zu entwickeln. Unsere Kunden erwarten High-End L&ouml;sungen. So entwickeln wir beispielsweise im Auftrag unserer Kunden L&ouml;sungen f&uuml;r die integrierte automatische Abwicklung komplexer Gesch&auml;ftsprozesse. Anwendungen f&uuml;r den Bereich der mobiler Endger&auml;te geh&ouml;ren ebenso zum Spektrum unserer M&ouml;glich&shy;keiten wie auch individuelle Cloud Computing L&ouml;sungen. Fragen Sie uns.<br /><br /><a href="products.html">Weiterlesen &raquo;</a></span> </li>
+
+<li class="slider1Image">
+    <img src="images/photo6.jpg" alt="3" />
+    <span class="right"><h2>IT-Projektmanagement</h2>Wie oft in den letzten Jahren haben Sie in Ihrem Unternehmen, Ihrer Organisation oder Verwaltung erlebt, dass Software-Projekte die urspr&uuml;nglich veranschlagten Ziele, Budget- oder Zeitgrenzen nicht eingehalten haben oder g&auml;nzlich gescheitert sind. Die Gr&uuml;nde hierf&uuml;r sind vielf&auml;ltig, h&auml;ufig sind sie jedoch in mangelhaftem Projektmanagement und fehlender Qualifikation zu finden. <br />Wir verf&uuml;gen &uuml;ber eine reichhaltige Erfahrung im Management von IT-Projekten unterschiedlichster Gr&ouml;&szlig;e. Unsere erfahrenen Projektmanager f&uuml;hren Ihr Vorhaben zielsicher durch alle Phasen des Projekts. <br /><br /><a href="products.html">Weiterlesen &raquo;</a></span>
+</li>
 
 <li class="slider1Image">
 <img src="images/photo2.jpg" alt="2" />
-<span class="right"><h2>Business Integration<br />&amp; Automation Services</h2>Kaum ein anderes Thema hat die Entwicklung von Unternehmens-Software in den letzten Jahren so dominiert wie Geschäftsprozess-Integration und Automation. Wir entwickeln zukunftsweisende Lösungen auf Basis von Anwendungsservern wie <strong>Microsoft Biztalk 2010</strong> und <strong>Microsoft SharePoint 2010</strong> &ndash; übrigens nicht nur für große Unternehmen. Gerade auch kleine und mittlelgroße Unternehmen profitieren von den neuen Möglich&shy;keiten, Geschäftsprozesse mit Kunden und Partnerunter&shy;nehmen zu synchronisieren und eigene Geschäftsabläufe mit Hilfe von elektroni&shy;schen Formularen und Workflows zu automatisieren.<br /><br /><a href="products.html">Weiterlesen &raquo;</a> </span></li>
+<span class="right"><h2>Business Integration<br />&amp; Automation Services</h2>Kaum ein anderes Thema hat die Entwicklung von Unternehmens-Software in den letzten Jahren so dominiert wie Gesch&auml;ftsprozess-Integration und Automation. Wir entwickeln zukunftsweisende L&ouml;sungen auf Basis von Anwendungsservern wie <strong>Microsoft Biztalk 2013</strong> und <strong>Microsoft SharePoint 2013</strong> &ndash; &uuml;brigens nicht nur f&uuml;r gro&szlig;e Unternehmen. Gerade auch kleine und mittlelgro&szlig;e Unternehmen profitieren von den neuen M&ouml;glich&shy;keiten, Gesch&auml;ftsprozesse mit Kunden und Partnerunter&shy;nehmen zu synchronisieren und eigene Gesch&auml;ftsabl&auml;ufe mit Hilfe von elektroni&shy;schen Formularen und Workflows zu automatisieren.<br /><br /><a href="products.html">Weiterlesen &raquo;</a> </span></li>
 
 <li class="slider1Image">
-<img src="images/photo3.jpg" alt="3" />
-<span class="right"><h2>E-Government und Öffentliche Verwaltung</h2>In den letzten 10 Jahren hat es auf allen staatlichen Ebenen eine Vielzahl von Initiativen im Bereich E-Government gegeben. Dabei wurden Rahmenwerke und Infrastrukturen geschaffen, auf die moderne E-Government-Lösungen aufbauen können. Northstream beteiligt sich aktiv an der Entwicklung standardisierter IT-Schnittstellen und Datenformate, denn Standards wirken kostensenkend und sind wettbewerbsförderlich. Für die angespannte Situation der öffentlichen Haushalte bedeutet dies bessere Software-Produkte zu günstigeren Konditionen.<br /><br /><a href="products.html">Weiterlesen &raquo;</a> </span></li>
-
-<li class="slider1Image">
-<img src="images/photo4.jpg" alt="4" />
-<span class="right"><h2>Corporate Responsibility</h2>Wir nehmen unsere Verantwortung für Mitarbeiter und Umwelt sehr ernst. Wir sind der Überzeugung, dass gute Arbeit nur von gut motivierten Mitarbeitern möglich ist. So bieten wir beispielsweise unseren Mitarbeitern eine kostengünstige Kinderbetreuung an. Wir ermuntern unsere Mitarbeiter zur Weiterbildung und unterstützen das lebenslange Lernen mit individuellen Angeboten. Wir motivieren unsere Mitarbeiter Open-Source Projekte zu unterstützen, weil auch das Unternehmen davon profitiert. Wir bitten unsere Mitarbeiter soziale und Umwelt-Projekte vorzuschlagen, die wir im Rahmen unserer Verantwortung unterstützen.<br /><br /><a href="products.html">Weiterlesen &raquo;</a></span></li>
+<img src="images/photo3.jpg" alt="4" />
+<span class="right"><h2>E-Government und &Ouml;ffentliche Verwaltung</h2>In den letzten 10 Jahren hat es auf allen staatlichen Ebenen eine Vielzahl von Initiativen im Bereich E-Government gegeben. Dabei wurden Rahmenwerke und Infrastrukturen geschaffen, auf die moderne E-Government-L&ouml;sungen aufbauen k&ouml;nnen. Northstream beteiligt sich aktiv an der Entwicklung standardisierter IT-Schnittstellen und Datenformate, denn Standards wirken kostensenkend und sind wettbewerbsf&ouml;rderlich. F&uuml;r die angespannte Situation der &ouml;ffentlichen Haushalte bedeutet dies bessere Software-Produkte zu g&uuml;nstigeren Konditionen.<br /><br /><a href="products.html">Weiterlesen &raquo;</a> </span></li>
 
 <div class="clear slider1Image"></div>
 </ul>
@@ -152,33 +152,37 @@ function ShowMessage(msg, status)
 <h1 class="main_heading">Cutting-Edge Software &amp; IT-Projektmanagement</h1>
 <h2>Willkommen bei Northstream Deutschland</h2>
 <p>
-"Cutting Edge" ist für uns nicht nur ein Begriff aus dem Marketing. Viele unserer Projekte bewegen sich an der Grenze heute erprobter und machbarer Verfahren, oder gehen darüber hinaus. Die Software-Entwicklung im Hochtechnologie-Bereich verlangt neben qualifizierten Mitarbeitern auch die Zusammenarbeit mit Hochschulen und Universitäten, sowie Forschungseinrichtungen wie das Fraunhofer-Institut.<br />
-Zu unseren Kunden gehören viele namhafte mittelständische Unternehmen sowie öffentliche Auftraggeber. Sie alle Vertrauen unserer Fähigkeit IT-Trends zu evaluieren und neueste Software-Technologien zu planen und zu entwickeln.</p>
+    "Cutting Edge" ist f&uuml;r uns nicht nur ein Begriff aus dem Marketing sondern gelebte Praxis. .Es bedeutet f&uuml;r uns, dass wir bei unseren Projekten klare Linien befolgen. Bei der Entwicklung anspruchsvoller Software stehen auf Nutzerseite Usability und ansprechendes Design, auf Autraggeberseite Einhaltung der Projektziele und auf Entwicklerseite die Befolgung klarer Designpattern, Entwicklungsrichtlinien und strukturierter Vorgehensweisen im Mittelpunkt. Bei allem ber&uuml;cksichtigen wir die Zukunftsf&auml;higkeit eingesetzter Technologien, die fast immer einem sehr starken Wandel unterzogen sind. Wann immer m&ouml;glich bevorzugen wir Standards oder weit verbreitete Technologien anstelle von Nischenl&ouml;sungen.<br />
+Zu unseren Kunden geh&ouml;ren internationale Konzerne, namhafte mittelst&auml;ndische Unter&shy;nehmen sowie &ouml;ffentliche Auftraggeber. Sie alle Vertrauen unserer F&auml;higkeit IT-Trends zu evaluieren und neueste Software-Technologien zu planen und zu entwickeln.<br />&nbsp;</p>
 
-<h3>Geschäftsprozess-Integration und Automation</h3>
-<p class="intro">
-<img class="text-thumb"  src="images/thumb-integration.jpg" alt="Integration und Atomation" />Kaum ein anderes Thema hat die Entwicklung von Unternehmens-Software in den letzten Jahren so dominiert wie Geschäftsprozess-Integration und Automation. 
-Wir entwickeln zukunftsweisende Lösungen auf Basis von Anwendungsservern wie <strong>Microsoft Biztalk 2010</strong> und <strong>Microsoft SharePoint 2010</strong> &ndash; übrigens nicht nur für große Unternehmen. Gerade auch kleine und mittelgroße Unternehmen profitieren von den neuen Möglichkeiten, Geschäftsprozesse mit Kunden und Partnerunternehmen zu 
-synchronisieren und eigene Geschäftsabläufe mit Hilfe von elektronischen Formularen und Workflows zu automatisieren. <a href="products.html">Mehr ...</a></p>
+    <h3>Software-Entwicklung</h3>
+    <p class="intro">
+        <img class="text-thumb" src="images/thumb-sm-dev.jpg" alt="Software Development" />Bei der Softwareentwicklung stellen wir an uns selbst hohe Anspr&uuml;che, denn unsere Kunden erwarten von uns qualitativ hochwertige High-End L&ouml;sungen. Entscheidend f&uuml;r uns ist - neben Einhaltung der Projektvorgaben - die Zufrieden&shy;heit des Kunden und seiner Mitarbeiter. <a href="products.html#dev">Weiterlesen ...</a><br />&nbsp;
+    </p>
 
-<h3>Software-Entwicklung</h3>
-<p class="intro">
-<img class="text-thumb"  src="images/thumb-dev.jpg" alt="Software Development" />Northstream Deutschland beschäftigt nur hochqualifizierte Software-Entwickler. Ständige Weiterbildung der Mitarbeiter und die Anwendung modernster Code-Pattern und Entwicklungs&shy;technologien sind obligatorisch. Entscheidend ist für uns die Zufriedenheit des Kunden und seiner Mitarbeiter.<br />
-Unsere Kunden erwarten ergonomische High-End Lösungen. Wir entwickeln beispielsweise sicherheitskritische Anwendungen zur Muster- oder Gesichtserkennung.  auf mobilen Endgeräten. Anwendungen aus dem Bereich der Bioinformatik gehören ebenso zum Spektrum unserer Möglichkeiten wie auch individuelle Cloud Computing Lösungen oder Location-Aware Anwendungen. <a href="products.html#development">Mehr ...</a></p>
+    <h3>IT-Projektmanagement</h3>
+    <p class="intro">
+        <img class="text-thumb" src="images/thumb-sm-pm.jpg" alt="Projektmanagement" />Wie oft haben Sie in Ihrem Unternehmen, Ihrer Organisation oder Verwaltung erlebt, dass veranschlagte Budget-, Zeit- oder Zielvorgaben in IT-Projekten nicht eingehalten wurden oder diese Projekte g&auml;nzlich gescheitert sind? Unsere erfahrenen Projektmanager f&uuml;hren das Vorhaben zielsicher durch alle Phasen Ihres Projekts. <a href="services.html#pm">Weiterlesen ...</a><br />&nbsp;
+    </p>
 
-<h3>IT-Projektmanagement</h3>
-<p class="intro">
-<img class="text-thumb"  src="images/thumb-pm.jpg" alt="Projektmanagement" />Wie oft in den letzten Jahren haben Sie in Ihrem Unternehmen, Ihrer Organisation oder Verwaltung erlebt, dass Software-Projekte die ursprünglich veranschlagten Budget- oder Zeitgrenzen nicht eingehalten haben oder gänzlich gescheitert sind. Die Gründe hierfür sind vielfältig, häufig sind sie jedoch in mangelhaftem Projektmanagement und fehlender Qualifikation zu finden. Wir verfügen über eine große Erfahrung im Management von mittelgroßen und großen IT-Projekten. Unsere erfahrenen Projektmanager führen das Vorhaben zielsicher durch alle Phasen des Projekts. <a href="products.html#projectmanagement">Mehr ...</a></p>
+    <h3>Gesch&auml;ftsprozess-Integration und Automation</h3>
+    <p class="intro">
+        <img class="text-thumb" src="images/thumb-sm-bpi.jpg" alt="Integration und Atomation" />Kaum ein anderes Thema hat die Entwicklung von Unternehmenssoftware in den letzten Jahren so dominiert wie Gesch&auml;ftsprozess-Integration und Automation.
+        Wir entwickeln zukunftsweisende L&ouml;sungen auf Basis von Anwendungsservern wie <strong>Microsoft Biztalk 2013</strong> und <strong>Microsoft SharePoint 2013</strong> &ndash; &uuml;brigens nicht nur f&uuml;r gro&szlig;e Unternehmen. <a href="products.html#bpi">Weiterlesen ...</a><br />&nbsp;
+    </p>
 
-<h3>Studien und Forschung</h3>
-<p class="intro">
-<img class="text-thumb"  src="images/thumb-research.jpg" alt="Studies and Resaerch" />Northstream Deutschland beteiligt sich regelmäßig an IT bezogenen Forschungsprojekten, häufig im Rahmen von EU bzw. staatlich geförderten Forschungsprogrammen. In der Regel arbeiten wir im Rahmen dieser Programme eng mit Universitäten oder anderen Forschungseinrichtungen zusammen. So entwickeln wir in diesen Projekten beispielsweise Software für drahtlose Sensornetzwerke (WSN, Wireless Sensor Networks).<br />Schließlich erstellen wir im Auftrag unserer Kunden Studien wie Risikoanalysen oder Machbarkeitsstudien. Gerne informieren wir Sie ausführlicher. <a href="products.html#research">Mehr ...</a></p>
 
-<h3>IT-Technology Evaluation</h3>
-<p class="intro">
-<img class="text-thumb"  src="images/thumb-eval.jpg" alt="Technologie Evaluation" />Software-Entwicklung war früher wie heute ein komplexer Vorgang. Heute ist es allerdings für das Projektmanagement infolge wesentlich höherer Dynamik schwieriger, Trends und Entwicklungen abzuschätzen. Dies ist umso wichtiger, weil Fehlinvestitionen  hohe Verluste verursachen oder sogar die Existenz eines Unternehmens gefährden können. Um dieser Problematik zu begegnen, haben wir in unserem Research Center die Technology Evaluation Group (TEG) gegründet. Sie soll 
-sowohl uns als auch unseren Kunden helfen, wichtige und zukunftsfähige Trends zu erkennen. Gerne können Sie diese Dienstleistung für sich nutzen.  <a href="products.html#evaluation">Mehr ...</a></p>
+    <h3>Studien und Analysen</h3>
+    <p class="intro">
+        <img class="text-thumb" src="images/thumb-sm-research.jpg" alt="Studies and Analyzes" />Gerade im Bereich mittlerer bis gro&szlig;er Projekte teils umfangreiche Studien und Analysen unerl&auml;sslich.
+        Im Auftrag unserer Kunden erstellen wir technische Analysen und Technologie-Evaluationen, Risikoanalysen, Machbarkeitsstudien oder Umweltanalysen und vieles mehr. <a href="services.html#studies">Weiterlesen ...</a><br />&nbsp;
+    </p>
 
+    <h3>IT-Technology Evaluation</h3>
+    <p class="intro">
+        <img class="text-thumb" src="images/thumb-sm-eval.jpg" alt="Technologie Evaluation" />Software-Entwicklung war fr&uuml;her wie heute ein komplexer Vorgang. Allerdings ist es f&uuml;r das Projektmanagement heute infolge h&ouml;herer Dynamik schwieriger, Trends und Entwicklungen abzusch&auml;tzen.
+        Wir beobachten und evaluieren Ver&shy;&auml;nderungen im IT-Sektor sehr sorgf&auml;ltig. Nutzen auch Sie unsere Expertise. <a href="services.html#evaluation">Weiterlesen ...</a><br />&nbsp;
+    </p>
 
 </div><!-- close left -->
 
@@ -189,39 +193,39 @@ sowohl uns als auch unseren Kunden helfen, wichtige und zukunftsfähige Trends z
 
 <ul class="pane-list">
 
-<li><img src="images/thumb1.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Sicherheitskritische Anwendung für Smartphones und Mobile Devices</h2>
-<p class="product_text">Northstream entwickelt neuartige sicherheitskritische Gesichtserkennungsanwendung für Smartphones..</p>
+<li><img src="images/thumb-biztalk.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Biztalk Summit 2014</h2>
+<p class="product_text">Die diesj&auml;hrige "INTEGRATE 2014", die wichtigste Fach&shy;veranstaltung f&uuml;r Biztalk-Nutzer, findet vom 3. bis 5. Dezember am Microsoft Campus in Washington statt.</p>
 </li>
 
-<li><img src="images/thumb2.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Rekordumsatz im 4. Quartal 2012</h2>
-<p class="product_text">Northstream Deutschland hat das 4. Quartal 2012 er&shy;neut mit einem neuen Konzern-Rekordumsatz und Gewinn ab&shy;geschlossen.</p>
+<li><img src="images/thumb-vs.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Visual Studio 2015</h2>
+<p class="product_text">Microsoft ver&ouml;ffentlich weitere <a href="http://blogs.msdn.com/b/visualstudio/archive/2014/08/18/visual-studio-14-ctp-3-released.aspx"> CTP f&uuml;r die Version 14</a> ihrer Integrierten Entwicklungsumgebung. Final Release m&ouml;glicherweise noch in diesem Jahr.</p>
 </li>
 
-<li><img src="images/thumb3.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Volkswagen vergibt Forschungsauftrag</h2>
-<p class="product_text">Der Volkswagen-Konzern in Wolfsburg hat eine Mach&shy;bar&shy;keits&shy;studie für ein Geo-Tracking Verfahren in Auftrag gegeben.</p>
+<li><img src="images/thumb-sharepoint.png" width="46" height="46" alt="News" />
+<h2 class="latest_products_heading">Sharepoint Conference auf Channel 9</h2>
+<p class="product_text">Videomitschnitte der diesj&auml;hrigen Sharepoint-Konferenz mit aktuellen Themen wie Cloud oder Office365 Integra&shy;tion auf <a href="http://channel9.msdn.com/Events/SharePoint-Conference/2014">Channel 9</a>.</p>
 </li>
 
 </ul>
 
-<h3>Get In Touch</h3>
+<h3>Get in Touch</h3>
 <div id="contact_container">
-<span>Contact Customer Care Service</span><br />
-<script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
-<span>News &amp; Press Information Service</span><br />
-<script type="text/javascript">var link=decmail("4Y-ts4qYF3s1F@18YFLPFYsq3.ts","hSJciRU2Wmutpf17oG0kBzs5NZIjLQOarlbwD3yF4VH98dgvnKPEMCX6eTxqYA");var text=decmail("VTod6i 7cdOj6nFp qc4OEjbcFj","a0hu3wjP2WXIiqEdkCnZeSv1G4bOLzTNRsVYx9U6gtfKAF8cDrl5BoyMJQH7pm");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations Department</noscript><br /><br />
-<span>Job offers &amp; Recruitment</span><br />
-<script type="text/javascript">var link=decmail("LZH-qZYnLWKZpW@pyLW3uWLZnK.qZ","PAMpftVadwL3TQZbBci4S7NlJomuOv0xY9WGnqRF6U8rhgHeEDjkz2yKIX15sC");var text=decmail("Yw9ZMzv6w3v rwhNZv6w3v","OxI5zjVFY794H3pSWD1mdTQUAlBaG8tJoqKehfurk6gCisL2RNc0vnEPywbXMZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment Department</noscript><br /><br />
-<span>Senior Technical Lead</span><br />
-<script type="text/javascript">var link=decmail("cz0tt0L.UNE09F0UI@Ly9zUcz90NF.u0","eZnAKV6yEruPsaRXMlHkmY4thjSCG5Q10qLgvobpd9DOcNWi2IT7FfBzU8Jwx3");var text=decmail("oK. 3v5665Y B. CHW5Kc5nP","YaVqJ7BdO3tmpWhx0UlejozgLHw2Af4uQrvcyTnXNEP5GkIS9CFbs61RiK8MDZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Contact our Technical Lead</noscript><br /><br />
+<span>Sie sind bereits Kunde?</span><br />
+<script type="text/javascript">var link = decmail("WsuBFAGk-us00FkB@hFkBnuBkG4A.lG", "XGEFuy6W9bZH4Rf1YkqLxvBmiVUdph2OeMos7IcTNSCawg35rJjQztADK8l0nP"); document.write("<a href='mailto:" + link + "'>Customer Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
+<span>Sie haben eine allgemeine Frage?</span><br />
+<script type="text/javascript">var link = decmail("ezPXRW-CpXSLRjFx@FjCLGxLCpSJ.Yp", "JU6dPo9KxFg0QqNzGVWMiAaXfCB7pLDmIEYbjHOsn321Twuhvc5RZSl4r8kety"); document.write("<a href='mailto:" + link + "'>Public Relations</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations</noscript><br /><br />
+<span>Sie haben eine technische Anfrage?</span><br />
+<script type="text/javascript">var link = decmail("0pwaPrwsc-VBJJiK0@PiK0aV0KpsM.Up", "1R2Yg7WAtMIqUZLHFpDvhisK4cBnTkNyG3QOSECm0bdxX8fe5J6oarVluw9Pzj"); document.write("<a href='mailto:" + link + "'>Technical Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Technical Support</noscript><br /><br />
+<span>Sie m&ouml;chten sich bewerben?</span><br />
+<script type="text/javascript">var link = decmail("luRZ@tu3c9Zc3kxw.yk", "ZjdQ6hEFzOXvKRtTHLAelymJ94iC58aDGcrIoSkUBw1sN0fVpxYgM37ubnWP2q"); document.write("<a href='mailto:" + link + "'>Recruitment</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment</noscript><br /><br />
 </div><!-- close contact_container -->
 
 <h3>Customer Login</h3>
 
 <div id="form_container">
-<form action="clogin.html" target="iflogin" method="post" id="commentform">
+<form action="clogin" target="iflogin" method="post" id="commentform">
 <fieldset>
 
 <p><input type="text" name="email" id="email" class="input_bg" value="" size="22" tabindex="1" />
@@ -230,7 +234,7 @@ sowohl uns als auch unseren Kunden helfen, wichtige und zukunftsfähige Trends z
 <p><input type="password" name="pw" id="pw" class="input_bg" value="" size="22" tabindex="2" />
 <label for="pw"><small>Password</small></label></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="$('#login-status').text('Try to login. Please wait ...');logintimer=setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 20000);" /><span id="login-status"></span></p>
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="clearTimeout(logintimer); $('#login-status').removeClass('failed').text('Try to login. Please wait ...'); logintimer = setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 10000); return false;" /><span id="login-status"></span></p>
 
 </fieldset>
 </form>

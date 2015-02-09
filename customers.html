@@ -67,13 +67,11 @@ function decmail(coded, key)
 }
 
 var logintimer;
-function ShowMessage(msg, status)
-{
-  $('#login-status').addClass(status);
-  $('#login-status').text(msg);
-  if (status=='failed') $('#pw').val('');
-  setTimeout("$('#login-status').removeClass(status).text('');", 5000)
-  clearTimeout(logintimer);
+function ShowMessage(msg, status) {
+    $('#login-status').addClass(status).text(msg);
+    if (status == 'failed') $('#pw').val('');
+    logintimer = setTimeout("$('#login-status').removeClass(status).text('');", 5000)
+    //clearTimeout(logintimer);
 }
 
 </script>
@@ -103,9 +101,9 @@ function ShowMessage(msg, status)
 <ul>
    <li><a class="nav_home" href="index.html">Startseite</a><span class="nav_text nav_home">Willkommen</span></li>
    <li><a class="nav_products" href="products.html">Produkte</a><span class="nav_text nav_home">Unser Angebot</span></li>
-   <li><a class="nav_service" href="service.html">Services</a><span class="nav_text nav_service">Hosted-BPI</span></li>
+   <li><a class="nav_service" href="services.html">Services</a><span class="nav_text nav_service">Dienstleistung</span></li>
    <li><a class="nav_legal" href="legal.html">Kontakt</a><span class="nav_text nav_legal">Impressum</span></li>
-   <li><a class="nav_customer" href="customer.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
+   <li><a class="nav_customer" href="customers.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
 </ul>
 <div id="logo"><a href="index.html">
 	<img src="images/logo.png" width="140" height="40" alt="logo" /></a></div>
@@ -115,50 +113,54 @@ function ShowMessage(msg, status)
 <div id="left">
 <h2>Login erforderlich</h2>
 
-<p>Bitte beachten Sie: Für den Zugang zum Kundenbereich ist ein Login erforderlich. Melden Sie sich bitte mit ihrer Emailadresse und dem Kennwort an.<br /><br />
+<p>Bitte beachten Sie: F&uuml;r den Zugang zum Kundenbereich ist ein Login erforderlich. Melden Sie sich bitte mit ihrer Emailadresse und dem Kennwort an.<br /><br />
 Sie haben ihr Kennwort vergessen? Schreiben Sie uns einfach eine <script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");document.write("<a href='mailto:"+link+"'>Email</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Email</noscript><br /><br />.</p>
 
 </div><!-- close left -->
 
 <div id="right">
 
-<h3>Kurzmitteilungen</h3>
+    <h3>Kurzmitteilungen</h3>
 
-<ul class="pane-list">
+    <ul class="pane-list">
 
-<li><img src="images/thumb1.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Sicherheitskritische Anwendung für Smartphones und Mobile Devices</h2>
-<p class="product_text">Northstream entwickelt neuartige sicherheitskritische Gesichtserkennungsanwendung für Smartphones..</p>
-</li>
+        <li>
+            <img src="images/thumb-biztalk.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Biztalk Summit 2014</h2>
+            <p class="product_text">Die diesj&auml;hrige "INTEGRATE 2014", die wichtigste Fach&shy;veranstaltung f&uuml;r Biztalk-Nutzer, findet vom 3. bis 5. Dezember am Microsoft Campus in Washington statt.</p>
+        </li>
 
-<li><img src="images/thumb2.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Rekordumsatz im 4. Quartal 2012</h2>
-<p class="product_text">Northstream Deutschland hat das 4. Quartal 2012 er&shy;neut mit einem neuen Konzern-Rekordumsatz und Gewinn ab&shy;geschlossen.</p>
-</li>
+        <li>
+            <img src="images/thumb-vs.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Visual Studio 2015</h2>
+            <p class="product_text">Microsoft ver&ouml;ffentlich weitere <a href="http://blogs.msdn.com/b/visualstudio/archive/2014/08/18/visual-studio-14-ctp-3-released.aspx"> CTP f&uuml;r die Version 14</a> ihrer Integrierten Entwicklungsumgebung. Final Release m&ouml;glicherweise noch in diesem Jahr.</p>
+        </li>
 
-<li><img src="images/thumb3.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Volkswagen vergibt Forschungsauftrag</h2>
-<p class="product_text">Der Volkswagen-Konzern in Wolfsburg hat eine Mach&shy;bar&shy;keits&shy;studie für ein Geo-Tracking Verfahren in Auftrag gegeben.</p>
-</li>
+        <li>
+            <img src="images/thumb-sharepoint.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Sharepoint Conference auf Channel 9</h2>
+            <p class="product_text">Videomitschnitte der diesj&auml;hrigen Sharepoint-Konferenz mit aktuellen Themen wie Cloud oder Office365 Integra&shy;tion auf <a href="http://channel9.msdn.com/Events/SharePoint-Conference/2014">Channel 9</a>.</p>
+        </li>
 
-</ul>
+    </ul>
 
-<h3>Get In Touch</h3>
-<div id="contact_container">
-<span>Contact Customer Care Service</span><br />
-<script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
-<span>News &amp; Press Information Service</span><br />
-<script type="text/javascript">var link=decmail("4Y-ts4qYF3s1F@18YFLPFYsq3.ts","hSJciRU2Wmutpf17oG0kBzs5NZIjLQOarlbwD3yF4VH98dgvnKPEMCX6eTxqYA");var text=decmail("VTod6i 7cdOj6nFp qc4OEjbcFj","a0hu3wjP2WXIiqEdkCnZeSv1G4bOLzTNRsVYx9U6gtfKAF8cDrl5BoyMJQH7pm");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations Department</noscript><br /><br />
-<span>Job offers &amp; Recruitment</span><br />
-<script type="text/javascript">var link=decmail("LZH-qZYnLWKZpW@pyLW3uWLZnK.qZ","PAMpftVadwL3TQZbBci4S7NlJomuOv0xY9WGnqRF6U8rhgHeEDjkz2yKIX15sC");var text=decmail("Yw9ZMzv6w3v rwhNZv6w3v","OxI5zjVFY794H3pSWD1mdTQUAlBaG8tJoqKehfurk6gCisL2RNc0vnEPywbXMZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment Department</noscript><br /><br />
-<span>Senior Technical Lead</span><br />
-<script type="text/javascript">var link=decmail("cz0tt0L.UNE09F0UI@Ly9zUcz90NF.u0","eZnAKV6yEruPsaRXMlHkmY4thjSCG5Q10qLgvobpd9DOcNWi2IT7FfBzU8Jwx3");var text=decmail("oK. 3v5665Y B. CHW5Kc5nP","YaVqJ7BdO3tmpWhx0UlejozgLHw2Af4uQrvcyTnXNEP5GkIS9CFbs61RiK8MDZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Contact our Technical Lead</noscript><br /><br />
-</div><!-- close form_container -->
+    <h3>Get in Touch</h3>
+    <div id="contact_container">
+        <span>Sie sind bereits Kunde?</span><br />
+        <script type="text/javascript">var link = decmail("WsuBFAGk-us00FkB@hFkBnuBkG4A.lG", "XGEFuy6W9bZH4Rf1YkqLxvBmiVUdph2OeMos7IcTNSCawg35rJjQztADK8l0nP"); document.write("<a href='mailto:" + link + "'>Customer Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
+        <span>Sie haben eine allgemeine Frage?</span><br />
+        <script type="text/javascript">var link = decmail("ezPXRW-CpXSLRjFx@FjCLGxLCpSJ.Yp", "JU6dPo9KxFg0QqNzGVWMiAaXfCB7pLDmIEYbjHOsn321Twuhvc5RZSl4r8kety"); document.write("<a href='mailto:" + link + "'>Public Relations</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations</noscript><br /><br />
+        <span>Sie haben eine technische Anfrage?</span><br />
+        <script type="text/javascript">var link = decmail("0pwaPrwsc-VBJJiK0@PiK0aV0KpsM.Up", "1R2Yg7WAtMIqUZLHFpDvhisK4cBnTkNyG3QOSECm0bdxX8fe5J6oarVluw9Pzj"); document.write("<a href='mailto:" + link + "'>Technical Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Technical Support</noscript><br /><br />
+        <span>Sie m&ouml;chten sich bewerben?</span><br />
+        <script type="text/javascript">var link = decmail("luRZ@tu3c9Zc3kxw.yk", "ZjdQ6hEFzOXvKRtTHLAelymJ94iC58aDGcrIoSkUBw1sN0fVpxYgM37ubnWP2q"); document.write("<a href='mailto:" + link + "'>Recruitment</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment</noscript><br /><br />
+    </div><!-- close contact_container -->
+
 
 <h3>Customer Login</h3>
 
 <div id="form_container">
-<form action="clogin.html" target="iflogin" method="post" id="commentform">
+<form action="clogin" target="iflogin" method="post" id="commentform">
 <fieldset>
 
 <p><input type="text" name="email" id="email" class="input_bg" value="" size="22" tabindex="1" />
@@ -167,7 +169,7 @@ Sie haben ihr Kennwort vergessen? Schreiben Sie uns einfach eine <script type="t
 <p><input type="password" name="pw" id="pw" class="input_bg" value="" size="22" tabindex="2" />
 <label for="pw"><small>Password</small></label></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="$('#login-status').text('Try to login. Please wait ...');logintimer=setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 20000);" /><span id="login-status"></span></p>
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="clearTimeout(logintimer); $('#login-status').removeClass('failed').text('Try to login. Please wait ...'); logintimer = setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 10000); return false;" /><span id="login-status"></span></p>
 
 </fieldset>
 </form>

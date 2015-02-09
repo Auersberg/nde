@@ -67,13 +67,11 @@ function decmail(coded, key)
 }
 
 var logintimer;
-function ShowMessage(msg, status)
-{
-  $('#login-status').addClass(status);
-  $('#login-status').text(msg);
-  if (status=='failed') $('#pw').val('');
-  setTimeout("$('#login-status').removeClass(status).text('');", 5000)
-  clearTimeout(logintimer);
+function ShowMessage(msg, status) {
+    $('#login-status').addClass(status).text(msg);
+    if (status == 'failed') $('#pw').val('');
+    logintimer = setTimeout("$('#login-status').removeClass(status).text('');", 5000)
+    //clearTimeout(logintimer);
 }
 
 </script>
@@ -103,9 +101,9 @@ function ShowMessage(msg, status)
 <ul>
    <li><a class="nav_home" href="index.html">Startseite</a><span class="nav_text nav_home">Willkommen</span></li>
    <li><a class="nav_products" href="products.html">Produkte</a><span class="nav_text nav_home">Unser Angebot</span></li>
-   <li><a class="nav_service" href="service.html">Services</a><span class="nav_text nav_service">Hosted-BPI</span></li>
+   <li><a class="nav_service" href="services.html">Services</a><span class="nav_text nav_service">Dienstleistung</span></li>
    <li><a class="nav_legal" href="legal.html">Kontakt</a><span class="nav_text nav_legal">Impressum</span></li>
-   <li><a class="nav_customer" href="customer.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
+   <li><a class="nav_customer" href="customers.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
 </ul>
 <div id="logo"><a href="index.html">
 	<img src="images/logo.png" width="140" height="40" alt="logo" /></a></div>
@@ -114,85 +112,96 @@ function ShowMessage(msg, status)
 
 
 <div id="left">
-<a name="integration"></a>
-<h2>Geschäftsprozess-Integration und Automation</h2>
-<p>Kaum ein anderes Thema hat die Entwicklung von Unternehmens-Software in den letzten Jahren so dominiert wie Software-Integration und Automation. Wir entwickeln zukunftsweisende Lösungen auf Basis von Anwendungsservern wie Microsoft Biztalk und Microsoft SharePoint 2010 &ndash; übrigens nicht nur für große Unternehmen. Gerade auch kleine und mittelgroße Unternehmen profitieren von den neuen Möglichkeiten, Geschäftsprozesse mit Kunden und Partnerunternehmen zu 
-<span>synchronisieren </span>und eigene Geschäftsabläufe mit Hilfe von elektronischen Formularen und Workflows zu automatisieren.<br />
-<img alt="Business Process Integration" class="biztalk" src="images/biztalk.jpg" /><br />
-Aktuelle Lösungen für die unternehmensübergreifende Geschäftsprozessintegration besitzen aufgrund der umfangreichen Aufgabenstellungen meist eine sehr hohe Komplexität. Diese Komplexität tritt schon bei der Entwicklung der zugrunde liegenden Anwendungssysteme zu Tage, z. B. bei der Modellierung von verteilten Geschäftsprozessen, bei der Definition von Transformationsregeln oder bei der Überwachung der Prozesse. Northstream Deutschland hilft Ihnen bei der Geschäftsprozessintegration und entwickelt Arbeitsumgebungen, mit denen Teams eine Vielzahl von Informationsquellen parallel analysieren und aufgrund dieser Informationen optimale Lösungen erarbeiten können.</p>
+    <a name="dev"></a>
+    <h2>Software Entwicklung</h2>
+    <p>
+        Bei der Softwareentwicklung stellen wir an uns selbst hohe Anspr&uuml;che, denn unsere Kunden erwarten von uns qualitativ hochwertige High-End L&ouml;sungen. Wir entwickeln beispielsweise hochflexible aber dennoch individuelle L&ouml;sungen f&uuml;r die Automatisierung Ihrer Gesch&auml;fts&shy;prozesse bis hin zur nahtlosen Einbindung mobiler Endger&auml;te. Sichere Cloud Computing L&ouml;sungen oder Location-Aware Anwendungen und vieles mehr geh&ouml;rt zum Sprektrum unserer M&ouml;glichkeiten.<br />
+        Wir besch&auml;ftigen hochqualifizierte Experten unterschiedlichster IT-Bereiche. Dabei kooperie&shy;ren wir mit anderen Unternehmen, um flexibel auf neue Auftr&auml;ge reagieren zu k&ouml;nnen. St&auml;ndige Weiterbildung und die Nutzung modernster Entwicklungs­technologien und Code-Pattern sind obligatorisch. Entscheidend f&uuml;r uns ist - neben Einhaltung der Projektvorgaben - die Zufriedenheit des Kunden und seiner Mitarbeiter.<br/>&nbsp;
+    </p>
 
-<a name="x-bpi"></a>
+<a name="bpi"></a>
+<h2>Gesch&auml;ftsprozess-Integration und Automation</h2>
+<p>Kaum ein anderes Thema hat die Entwicklung von Unternehmens-Software in den letzten Jahren so dominiert wie Software-Integration und Automation. Die Automaisierung von Gesch&auml;ftsprozessen, die Integration gewachsener heterogener Systeme und die Anbindung an Zulieferer, Kunden und Elektronische Marktpl&auml;tze oder die automatisierte Verarbeitung digitaler Informationen von Datenlieferanten stellen f&uuml;r alle Unternehmen eine Herausforderung dar.<br/>
+   Wir entwickeln zukunftsweisende L&ouml;sungen auf Basis von Anwendungsservern wie Microsoft Biztalk 2013 und Microsoft SharePoint 2013 &ndash; &uuml;brigens nicht nur f&uuml;r gro&szlig;e Unternehmen. Gerade auch kleine und mittelgro&szlig;e Unternehmen (SME) profitieren davon, Gesch&auml;fts&shy;prozesse mit Kunden und Partnerunternehmen zu 
+<span>synchronisieren </span>und eigene Gesch&auml;fts&shy;abl&auml;ufe mit Hilfe von elektronischen Formularen und Workflows zu automatisieren.<br />
+<img alt="Business Process Integration" class="biztalk" src="images/biztalk2.png" /><br />
+Traditionelle propriet&auml;re L&ouml;sungen f&uuml;r die unternehmens&uuml;bergreifende Gesch&auml;ftsprozess&shy;integration besitzen aufgrund der umfangreichen Aufgabenstellungen meist eine sehr hohe Komplexit&auml;t. Diese Komplexit&auml;t tritt schon bei der Entwicklung der zugrunde liegenden Anwendungssysteme zu Tage, z. B. bei der Modellierung von verteilten Gesch&auml;ftsprozessen, bei der Definition von Transformationsregeln oder bei der &uuml;berwachung der Prozesse. Wir helfen Ihnen bei der Gesch&auml;ftsprozessintegration und entwickeln Arbeitsumgebungen, in denen Teams eine Vielzahl von Informationsquellen parallel analysieren und aufgrund dieser Informationen optimale L&ouml;sungen erarbeiten k&ouml;nnen.
+    </p>
+    <p>
+        Informieren Sie sich auch &uuml;ber unsere <a href="services.html#hbpi">Hosted Business Integration (xBPI) Services</a>.
+    </p>
+<!--<a name="x-bpi"></a>
 <h2>Hosted Business Process Integration (H-BPI)</h2>
-<p>Die Integration von Geschäftsprozessen war in der Vergangenheit mit hohem personellen Aufwand und insbesondere auch mit hohen Kosten und Risiken verbunden. Die Kosten für die Unternehmen sind dabei umso höher, je mehr externe Geschäftspartner integriert werden müssen und je komplexer und je weniger etabliert die verwendeten Standards sind. Die Lösung für dieses Problem sind unsere 
+<p>Die Integration von Gesch&auml;ftsprozessen war in der Vergangenheit mit hohem personellen Aufwand und insbesondere auch mit hohen Kosten und Risiken verbunden. Die Kosten f&uuml;r die Unternehmen sind dabei umso h&ouml;her, je mehr externe Gesch&auml;ftspartner integriert werden m&uuml;ssen und je komplexer und je weniger etabliert die verwendeten Standards sind. Die L&ouml;sung f&uuml;r dieses Problem sind unsere 
 <strong>Hosted Business Integration (xBPI) Services</strong>. <a href="service.html">mehr ...</a></p>
-
-<a name="development"></a>
-<h2>Software Entwicklung</h2>
-<p>"Cutting Edge" ist für uns nicht nur ein Begriff aus dem Marketing. Viele unserer Projekte bewegen sich häufig an der Grenze heute erprobter und machbarer Verfahren, oder gehen darüber hinaus. Die Software-Entwicklung im Hochtechnologie-Bereich verlangt neben qualifizierten Mitarbeitern auch die Zusammenarbeit mit Hochschulen und Universitäten, sowie Forschungseinrichtungen, wie das Fraunhofer-Institut. In allen Projekten werden neue Erkenntnisse für softwaretechische Fragestellungen gefunden. Damit diese nicht verloren gehen, werden sie in unser hausinternes wissensbasiertes System mit mehreren zehntausend Lösungsansätzen und Algorithmen eingestellt. Für unsere Kunden bedeutet das höhere Software-Qualität in kürzerer Entwicklungszeit.<br />Die Automobilbranche gehört ebenso zu unseren Kunden wie viele namhafte mittelständische Unternehmen und öffentliche Auftraggeber. Sie alle Vertrauen unserer Fähigkeit IT-Trends zu evaluieren und neueste Software-Technologien zu planen und zu entwickeln. <br />Northstream Deutschland beschäftigt nur hochqualifizierte Software-Entwickler. Ständige Weiterbildung der Mitarbeiter und die Anwendung modernster Code-Pattern und Entwicklungstechnologien sind obligatorisch. Entscheidend ist für uns die Zufriedenheit des Kunden und seiner Mitarbeiter. <br />Unsere Kunden erwarten High-End Lösungen. So entwickeln wir im Auftrag unserer Kunden beispielsweise sicherheitskritische Anwendungen zur Muster- oder Gesichtserkennung auf mobilen Endgeräten. Anwendungen aus dem Bereich der Bioinformatik gehören ebenso zum Spektrum unserer Möglichkeiten wie auch individuelle Cloud Computing Lösungen oder Location-Aware Anwendungen.</p>
 
 <a name="projectmanagement"></a>
 <h2>IT Projektmanagement</h2>
-<p>Wie oft in den letzten Jahren haben Sie in Ihrem Unternehmen, Ihrer Organisation oder Verwaltung erlebt, dass Software-Projekte die ursprünglich veranschlagten Budget- oder Zeitgrenzen nicht eingehalten haben. Eine nicht geringe Anzahl an Vorhaben scheitern mithin auch ganz. Die Ursachen sind vielfältig, jedoch spielt meist Überforderung und mangelhaftes Projektmanagement die entscheidende Rolle.<br />Wir verfügen über eine große Erfahrung im Management von mittelgroßen und großen IT-Projekten. Unsere erfahrenen Projektmanager führen das Vorhaben zielsicher durch alle Phasen des Projekts. Häufig werden wir auch zu Projekten gerufen, die zu scheitern drohen. Auch stark gefährdete Vorhaben lassen sich durch energisches Eingreifen meist retten. Fragen Sie uns!</p>
+<p>Wie oft in den letzten Jahren haben Sie in Ihrem Unternehmen, Ihrer Organisation oder Verwaltung erlebt, dass Software-Projekte die urspr&uuml;nglich veranschlagten Budget- oder Zeitgrenzen nicht eingehalten haben. Eine nicht geringe Anzahl an Vorhaben scheitern mithin auch ganz. Die Ursachen sind vielf&auml;ltig, jedoch spielt meist &uuml;berforderung und mangelhaftes Projektmanagement die entscheidende Rolle.<br />Wir verf&uuml;gen &uuml;ber eine gro&szlig;e Erfahrung im Management von mittelgro&szlig;en und gro&szlig;en IT-Projekten. Unsere erfahrenen Projektmanager f&uuml;hren das Vorhaben zielsicher durch alle Phasen des Projekts. H&auml;ufig werden wir auch zu Projekten gerufen, die zu scheitern drohen. Auch stark gef&auml;hrdete Vorhaben lassen sich durch energisches Eingreifen meist retten. Fragen Sie uns!</p>
 
 <a name="research"></a>
 <h2>Studien und Forschung</h2>
-<p>Northstream Deutschland beteiligt sich regelmäßig an IT bezogenen Forschungsprojekten, häufig im Rahmen von EU bzw. staatlich geförderten Forschungsprogrammen. In der Regel arbeiten wir im Rahmen dieser Programme eng mit Universitäten oder anderen Forschungseinrichtungen zusammen. So entwickeln wir in diesen Projekten beispielsweise Software für drahtlose Sensornetzwerke (WSN, Wireless Sensor Networks).<br />Schließlich erstellen wir im Auftrag unserer Kunden Studien wie Risikoanalysen oder Machbarkeitsstudien. Gerne informieren wir Sie ausführlicher.</p>
+<p>Northstream Deutschland beteiligt sich regelm&auml;&szlig;ig an IT bezogenen Forschungsprojekten, h&auml;ufig im Rahmen von EU bzw. staatlich gef&ouml;rderten Forschungsprogrammen. In der Regel arbeiten wir im Rahmen dieser Programme eng mit Universit&auml;ten oder anderen Forschungseinrichtungen zusammen. So entwickeln wir in diesen Projekten beispielsweise Software f&uuml;r drahtlose Sensornetzwerke (WSN, Wireless Sensor Networks).<br />Schlie&szlig;lich erstellen wir im Auftrag unserer Kunden Studien wie Risikoanalysen oder Machbarkeitsstudien. Gerne informieren wir Sie ausf&uuml;hrlicher.</p>
 
 <a name="evaluation"></a>
 <h2>IT-Technology Evaluation</h2>
-<p>Software-Entwicklung ist früher wie heute ein komplexer Vorgang. Heute ist es allerdings für das Projektmanagement infolge wesentlich höherer Dynamik schwieriger, Trends und Entwicklungen abzuschätzen. Dies ist umso wichtiger, weil Fehlinvestitionen hohe Verluste verursachen oder sogar die Existenz eines Unternehmens gefährden können. Um dieser Problematik zu begegnen, haben wir in unserem Research Center die Technology Evaluation Group (TEG) gegründet. Sie soll uns und unseren Kunden helfen wichtige und zukunftsfähige Trends zu erkennen. Gerne können Sie diese Dienstleistung acuh für ihr Unternehmen oder ihre Organisation nutzen.</p>
+<p>Software-Entwicklung ist fr&uuml;her wie heute ein komplexer Vorgang. Heute ist es allerdings f&uuml;r das Projektmanagement infolge wesentlich h&ouml;herer Dynamik schwieriger, Trends und Entwicklungen abzusch&auml;tzen. Dies ist umso wichtiger, weil Fehlinvestitionen hohe Verluste verursachen oder sogar die Existenz eines Unternehmens gef&auml;hrden k&ouml;nnen. Um dieser Problematik zu begegnen, haben wir in unserem Research Center die Technology Evaluation Group (TEG) gegr&uuml;ndet. Sie soll uns und unseren Kunden helfen wichtige und zukunftsf&auml;hige Trends zu erkennen. Gerne k&ouml;nnen Sie diese Dienstleistung acuh f&uuml;r ihr Unternehmen oder ihre Organisation nutzen.</p>
 
 <a name="opensource"></a>
 <h2>Open Source</h2>
-<p>Northstream Deutschland unterstützt die Open Source Idee sowohl finanziell, wie auch mit Entwicklungskapazitäten. Wir ermutigen unsere Mitarbeiter sich an Open Source Projekten zu beteiligen, bzw. eigene Open Source Projekte ins Leben zu rufen. Ein Projekt, welches von einigen unserer Mitarbeiter gegründet und kontinuierlich weiterentwickelt wird, ist die  Programmbibliothek <a href="#library">Geoutility Library</a> (s. u.). <br /> 
-Wir sind der Überzeugung, dass beide Paradigmen, Open und Closed Source, ihre Berechtigung haben. Es gilt die Vor- und Nachteile beider Ansätze zu evaluieren, eine ideologische Festlegung auf ein Paradigma ist sollte auf jeden Fall vermieden werden. Die Erfahrung einiger Unternehmen sowie öffentlicher Verwaltungen, die einseitig auf Open Source Lösungen setzten und scheiterten (z. B. das Bumdesministerium des Äußeren der Bundesrepublik Deutschland) sind ebenso falsch wie das einseitige Beharren auf Closed Source Produkte, weil dadurch einige Einsparpotentiale vergeben werden. <br />Northstream Deutschland unterstützt in unterschiedlicher Form Open Source Projekte als Administratoren, Projektmanager, Software-Entwickler oder mit finanziellen Mitteln. Unter anderem werden die bekannten OS-Projekte <a href="http://glassfish.java.net" target="_blank">Glassfish Server</a> (JavaEE basierter Anwendungsserver), <a href="http://maven.apache.org/" target="_blank">Apache Maven</a> (Management Tool für Software-Projekte) oder <a href="http://nuget.codeplex.com/" target="_blank">NuGet</a> (Package Management System für die Entwicklung) von uns unterstützt.</p>
+<p>Northstream Deutschland unterst&uuml;tzt die Open Source Idee sowohl finanziell, wie auch mit Entwicklungskapazit&auml;ten. Wir ermutigen unsere Mitarbeiter sich an Open Source Projekten zu beteiligen, bzw. eigene Open Source Projekte ins Leben zu rufen. Ein Projekt, welches von einigen unserer Mitarbeiter gegr&uuml;ndet und kontinuierlich weiterentwickelt wird, ist die  Programmbibliothek <a href="#library">Geoutility Library</a> (s. u.). <br /> 
+Wir sind der &uuml;berzeugung, dass beide Paradigmen, Open und Closed Source, ihre Berechtigung haben. Es gilt die Vor- und Nachteile beider Ans&auml;tze zu evaluieren, eine ideologische Festlegung auf ein Paradigma ist sollte auf jeden Fall vermieden werden. Die Erfahrung einiger Unternehmen sowie &ouml;ffentlicher Verwaltungen, die einseitig auf Open Source L&ouml;sungen setzten und scheiterten (z. B. das Bumdesministerium des &auml;u&szlig;eren der Bundesrepublik Deutschland) sind ebenso falsch wie das einseitige Beharren auf Closed Source Produkte, weil dadurch einige Einsparpotentiale vergeben werden. <br />Northstream Deutschland unterst&uuml;tzt in unterschiedlicher Form Open Source Projekte als Administratoren, Projektmanager, Software-Entwickler oder mit finanziellen Mitteln. Unter anderem werden die bekannten OS-Projekte <a href="http://glassfish.java.net" target="_blank">Glassfish Server</a> (JavaEE basierter Anwendungsserver), <a href="http://maven.apache.org/" target="_blank">Apache Maven</a> (Management Tool f&uuml;r Software-Projekte) oder <a href="http://nuget.codeplex.com/" target="_blank">NuGet</a> (Package Management System f&uuml;r die Entwicklung) von uns unterst&uuml;tzt.</p>
 <a name="library"></a>
 <h3>Geoutility Library</h3>
-<p>Eines unserer populärsten Open Source Projekte ist die Programmbibliothek Geoutility Library. Sie wird auf der bekannten OS-Plattform Codeplex (<a href="http://geoutility.codeplex.com" target="_top">http://geoutility.codeplex.com</a>) gehostet. Sie hat bereits mehr als 200.000 Downloads zu verzeichnen, und belegt aktuell einen Rang in den TOP20 der Download-Statistik.<br />
-Die Programmbibliothek verarbeitet Satellitendaten und Satellitenbilder bzw. Luftbilder verschiedener Anbieter, führt Berechnungen mit diesen Daten aus und stellt Beziehungen zu geographischen Koordinaten her. Die Bibliothek wurde ursprünglich im Rahmen eines Forschungsprojekts im Auftrag des Fraunhofer Instituts entwickelt. Auf dem Markt war kein Produkt erhältlich und damit entschlossen wir uns zur Eigenentwicklung. Im Jahr 2009 wurde die Bibliothek als Teil des Gesamtprojekts in eine Open Source Lizenz überführt und veröffentlicht. Wir verwenden die Bibliothek selbst in einigen weiteren Entwicklungsprojekten. Damit ist sichergestellt, dass neuere Entwicklungen ständig in die Evolution einfließen und auch die Open Source Gemeinde weiterhin davon profitieren kann.<br />Die Geoutility Library ist auf Windows, Linux und Apple Rechnern, sowie den meisten Smartphones lauffähig. Sie können auf der <a href="http://geoutility.codeplex.com/Downloads" target="_top">Codeplex-Website</a> eine kleine Testanwendung oder die Bibliothek herunterladen. Bitte beachten Sie die Lizenzbedingungen.</p>
+<p>Eines unserer popul&auml;rsten Open Source Projekte ist die Programmbibliothek Geoutility Library. Sie wird auf der bekannten OS-Plattform Codeplex (<a href="http://geoutility.codeplex.com" target="_top">http://geoutility.codeplex.com</a>) gehostet. Sie hat bereits mehr als 200.000 Downloads zu verzeichnen, und belegt aktuell einen Rang in den TOP20 der Download-Statistik.<br />
+Die Programmbibliothek verarbeitet Satellitendaten und Satellitenbilder bzw. Luftbilder verschiedener Anbieter, f&uuml;hrt Berechnungen mit diesen Daten aus und stellt Beziehungen zu geographischen Koordinaten her. Die Bibliothek wurde urspr&uuml;nglich im Rahmen eines Forschungsprojekts im Auftrag des Fraunhofer Instituts entwickelt. Auf dem Markt war kein Produkt erh&auml;ltlich und damit entschlossen wir uns zur Eigenentwicklung. Im Jahr 2009 wurde die Bibliothek als Teil des Gesamtprojekts in eine Open Source Lizenz &uuml;berf&uuml;hrt und ver&ouml;ffentlicht. Wir verwenden die Bibliothek selbst in einigen weiteren Entwicklungsprojekten. Damit ist sichergestellt, dass neuere Entwicklungen st&auml;ndig in die Evolution einflie&szlig;en und auch die Open Source Gemeinde weiterhin davon profitieren kann.<br />Die Geoutility Library ist auf Windows, Linux und Apple Rechnern, sowie den meisten Smartphones lauff&auml;hig. Sie k&ouml;nnen auf der <a href="http://geoutility.codeplex.com/Downloads" target="_top">Codeplex-Website</a> eine kleine Testanwendung oder die Bibliothek herunterladen. Bitte beachten Sie die Lizenzbedingungen.</p>-->
 
 
 </div><!-- close left -->
 
 <div id="right">
 
-<h3>Kurzmitteilungen</h3>
+    <h3>Kurzmitteilungen</h3>
 
-<ul class="pane-list">
+    <ul class="pane-list">
 
-<li><img src="images/thumb1.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Sicherheitskritische Anwendung für Smartphones und Mobile Devices</h2>
-<p class="product_text">Northstream entwickelt neuartige sicherheitskritische Gesichtserkennungsanwendung für Smartphones..</p>
-</li>
+        <li>
+            <img src="images/thumb-biztalk.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Biztalk Summit 2014</h2>
+            <p class="product_text">Die diesj&auml;hrige "INTEGRATE 2014", die wichtigste Fach&shy;veranstaltung f&uuml;r Biztalk-Nutzer, findet vom 3. bis 5. Dezember am Microsoft Campus in Washington statt.</p>
+        </li>
 
-<li><img src="images/thumb2.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Rekordumsatz im 4. Quartal 2012</h2>
-<p class="product_text">Northstream Deutschland hat das 4. Quartal 2012 er&shy;neut mit einem neuen Konzern-Rekordumsatz und Gewinn ab&shy;geschlossen.</p>
-</li>
+        <li>
+            <img src="images/thumb-vs.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Visual Studio 2015</h2>
+            <p class="product_text">Microsoft ver&ouml;ffentlich weitere <a href="http://blogs.msdn.com/b/visualstudio/archive/2014/08/18/visual-studio-14-ctp-3-released.aspx"> CTP f&uuml;r die Version 14</a> ihrer Integrierten Entwicklungsumgebung. Final Release m&ouml;glicherweise noch in diesem Jahr.</p>
+        </li>
 
-<li><img src="images/thumb3.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Volkswagen vergibt Forschungsauftrag</h2>
-<p class="product_text">Der Volkswagen-Konzern in Wolfsburg hat eine Mach&shy;bar&shy;keits&shy;studie für ein Geo-Tracking Verfahren in Auftrag gegeben.</p>
-</li>
+        <li>
+            <img src="images/thumb-sharepoint.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Sharepoint Conference auf Channel 9</h2>
+            <p class="product_text">Videomitschnitte der diesj&auml;hrigen Sharepoint-Konferenz mit aktuellen Themen wie Cloud oder Office365 Integra&shy;tion auf <a href="http://channel9.msdn.com/Events/SharePoint-Conference/2014">Channel 9</a>.</p>
+        </li>
 
-</ul>
+    </ul>
 
-<h3>Get In Touch</h3>
-<div id="contact_container">
-<span>Contact Customer Care Service</span><br />
-<script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
-<span>News &amp; Press Information Service</span><br />
-<script type="text/javascript">var link=decmail("4Y-ts4qYF3s1F@18YFLPFYsq3.ts","hSJciRU2Wmutpf17oG0kBzs5NZIjLQOarlbwD3yF4VH98dgvnKPEMCX6eTxqYA");var text=decmail("VTod6i 7cdOj6nFp qc4OEjbcFj","a0hu3wjP2WXIiqEdkCnZeSv1G4bOLzTNRsVYx9U6gtfKAF8cDrl5BoyMJQH7pm");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations Department</noscript><br /><br />
-<span>Job offers &amp; Recruitment</span><br />
-<script type="text/javascript">var link=decmail("LZH-qZYnLWKZpW@pyLW3uWLZnK.qZ","PAMpftVadwL3TQZbBci4S7NlJomuOv0xY9WGnqRF6U8rhgHeEDjkz2yKIX15sC");var text=decmail("Yw9ZMzv6w3v rwhNZv6w3v","OxI5zjVFY794H3pSWD1mdTQUAlBaG8tJoqKehfurk6gCisL2RNc0vnEPywbXMZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment Department</noscript><br /><br />
-<span>Senior Technical Lead</span><br />
-<script type="text/javascript">var link=decmail("cz0tt0L.UNE09F0UI@Ly9zUcz90NF.u0","eZnAKV6yEruPsaRXMlHkmY4thjSCG5Q10qLgvobpd9DOcNWi2IT7FfBzU8Jwx3");var text=decmail("oK. 3v5665Y B. CHW5Kc5nP","YaVqJ7BdO3tmpWhx0UlejozgLHw2Af4uQrvcyTnXNEP5GkIS9CFbs61RiK8MDZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Contact our Technical Lead</noscript><br /><br />
-</div><!-- close form_container -->
+    <h3>Get in Touch</h3>
+    <div id="contact_container">
+        <span>Sie sind bereits Kunde?</span><br />
+        <script type="text/javascript">var link = decmail("WsuBFAGk-us00FkB@hFkBnuBkG4A.lG", "XGEFuy6W9bZH4Rf1YkqLxvBmiVUdph2OeMos7IcTNSCawg35rJjQztADK8l0nP"); document.write("<a href='mailto:" + link + "'>Customer Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
+        <span>Sie haben eine allgemeine Frage?</span><br />
+        <script type="text/javascript">var link = decmail("ezPXRW-CpXSLRjFx@FjCLGxLCpSJ.Yp", "JU6dPo9KxFg0QqNzGVWMiAaXfCB7pLDmIEYbjHOsn321Twuhvc5RZSl4r8kety"); document.write("<a href='mailto:" + link + "'>Public Relations</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations</noscript><br /><br />
+        <span>Sie haben eine technische Anfrage?</span><br />
+        <script type="text/javascript">var link = decmail("0pwaPrwsc-VBJJiK0@PiK0aV0KpsM.Up", "1R2Yg7WAtMIqUZLHFpDvhisK4cBnTkNyG3QOSECm0bdxX8fe5J6oarVluw9Pzj"); document.write("<a href='mailto:" + link + "'>Technical Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Technical Support</noscript><br /><br />
+        <span>Sie m&ouml;chten sich bewerben?</span><br />
+        <script type="text/javascript">var link = decmail("luRZ@tu3c9Zc3kxw.yk", "ZjdQ6hEFzOXvKRtTHLAelymJ94iC58aDGcrIoSkUBw1sN0fVpxYgM37ubnWP2q"); document.write("<a href='mailto:" + link + "'>Recruitment</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment</noscript><br /><br />
+    </div><!-- close contact_container -->
+
 
 <h3>Customer Login</h3>
 
 <div id="form_container">
-<form action="clogin.html" target="iflogin" method="post" id="commentform">
+<form action="clogin" target="iflogin" method="post" id="commentform">
 <fieldset>
 
 <p><input type="text" name="email" id="email" class="input_bg" value="" size="22" tabindex="1" />
@@ -201,7 +210,7 @@ Die Programmbibliothek verarbeitet Satellitendaten und Satellitenbilder bzw. Luf
 <p><input type="password" name="pw" id="pw" class="input_bg" value="" size="22" tabindex="2" />
 <label for="pw"><small>Password</small></label></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="$('#login-status').text('Try to login. Please wait ...');logintimer=setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 20000);" /><span id="login-status"></span></p>
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="clearTimeout(logintimer); $('#login-status').removeClass('failed').text('Try to login. Please wait ...'); logintimer = setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 10000); return false;" /><span id="login-status"></span></p>
 
 </fieldset>
 </form>

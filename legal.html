@@ -67,13 +67,11 @@ function decmail(coded, key)
 }
 
 var logintimer;
-function ShowMessage(msg, status)
-{
-  $('#login-status').addClass(status);
-  $('#login-status').text(msg);
-  if (status=='failed') $('#pw').val('');
-  setTimeout("$('#login-status').removeClass(status).text('');", 5000)
-  clearTimeout(logintimer);
+function ShowMessage(msg, status) {
+    $('#login-status').addClass(status).text(msg);
+    if (status == 'failed') $('#pw').val('');
+    logintimer = setTimeout("$('#login-status').removeClass(status).text('');", 5000)
+    //clearTimeout(logintimer);
 }
 
 </script>
@@ -103,9 +101,9 @@ function ShowMessage(msg, status)
 <ul>
    <li><a class="nav_home" href="index.html">Startseite</a><span class="nav_text nav_home">Willkommen</span></li>
    <li><a class="nav_products" href="products.html">Produkte</a><span class="nav_text nav_home">Unser Angebot</span></li>
-   <li><a class="nav_service" href="service.html">Services</a><span class="nav_text nav_service">Hosted-BPI</span></li>
+   <li><a class="nav_service" href="services.html">Services</a><span class="nav_text nav_service">Dienstleistung</span></li>
    <li><a class="nav_legal" href="legal.html">Kontakt</a><span class="nav_text nav_legal">Impressum</span></li>
-   <li><a class="nav_customer" href="customer.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
+   <li><a class="nav_customer" href="customers.html">My Northstream</a><span class="nav_text nav_customer">Login erforderlich</span></li>
 </ul>
 <div id="logo"><a href="index.html">
 	<img src="images/logo.png" width="140" height="40" alt="logo" /></a></div>
@@ -117,15 +115,15 @@ function ShowMessage(msg, status)
 <h3>Kontaktinformationen</h3>
 
 <script type="text/javascript">
-var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");
+var link = decmail("8Sm7H87@mSD70C7DhHQ.1h", "pBD3f8S9WR1mUlMxjeIO6u54EKzbTPatZQAviYshVyrLXkowN2dnH7qJcFgGC0");
 var address = "<p>";
 address += "Anschrift:<br />";
 address += decmail("2ceMw3MeiCt QikM3LwxCFE","Y2inglKq3aoz14ywvSr5tDVdJ9FbxpXWCcPOBuAUNeIMQjEsHGTZ7Rh0L6fmk8") + "<br />";
 address += decmail("wcuycCsWHCvDH. n","eEgnhOxL8ZbH6tFwcTUCPB4NVjsiJDIY0lkSK72dRGvuaoz5M1fAmQ3yprX9qW") + "<br />";
 address += decmail("URvCl e7SitSL, T1tBjhza7F4","UPqDQ1mLxYf4vijMzOGrW7kRB6c2HTylKZun3C8pweXgASod0bsNh9JIVaE5tF") + "<br /><br />";
-address += "Email: <a href='mailto:"+link+"'>"+text+"</a><br /><br />";
-address += decmail("lOJ12äaxJaü2dOd: gd. XOdisZZ U0PocT","sKCyRF7iIjdlEZ21uXY9kDe3Qqoa8TAxUWmJ6rGNnhcvHPbB4Mz0VwfSgOtL5p") + "<br />";
-address += decmail("cCSWfJSfNON0MtNDfM4MZWfMqDSDOCCN0: sblya5iTily","oKyuaMYZEBg4DIC2p53j7iQkTJPfnRmHL9FVN0Ac6zStX1qhGOW8erbUxwsdvl");
+address += "Email: <a href='mailto:"+link+"'>"+link+"</a><br />";
+address += decmail("JX1SPä4d14üPyXy: RdX44XH 5KoXyNXP2", "cgyO5URadCbj4T9PmMpluQv1wZAXJqrVH8SBtkiLfKFhoz6xWINsD20eGEY3n7") + "<br />";
+address += decmail("cCSWfJSfNON0MtNDfM4MZWfMqDSDOCCN0: sblya5iTily", "oKyuaMYZEBg4DIC2p53j7iQkTJPfnRmHL9FVN0Ac6zStX1qhGOW8erbUxwsdvl");
 address += "</p>";
 document.write(address);
 </script>
@@ -137,66 +135,70 @@ document.write(address);
 <a name="privacy"></a>
 <h3>Datenschutz</h3>
 
-<p>Northstream Deutschland ist bestrebt, Ihre Privatsphäre zu schützen. Auf dieser 
-Website werden persönliche Daten erhoben, beispielsweise Ihre E-Mail-Adresse, 
-Ihren Namen oder Ihre private oder geschäftliche Adresse bzw. Telefonnummer. 
-Beim Zugriff auf Ihr persönliches Kundenkonto werden Sie aufgefordert, sich zur 
-Bestätigung Ihrer Identität mit einer E-Mail-Adresse und einem Kennwort 
+<p>Northstream Deutschland ist bestrebt, Ihre Privatsph&auml;re zu sch&uuml;tzen. Auf dieser 
+Website werden pers&ouml;nliche Daten erhoben, beispielsweise Ihre E-Mail-Adresse, 
+Ihren Namen oder Ihre private oder gesch&auml;ftliche Adresse bzw. Telefonnummer. 
+Beim Zugriff auf Ihr pers&ouml;nliches Kundenkonto werden Sie aufgefordert, sich zur 
+Best&auml;tigung Ihrer Identit&auml;t mit einer E-Mail-Adresse und einem Kennwort 
 anzumelden.<br /><br />
-Die Verwendung dieser Daten umfasst möglicherweise das Bereitstellen eines effizienteren Kundenservices; die Vereinfachung der Nutzung der Websites oder Dienste, indem dafür gesorgt wird, dass dieselben Informationen nicht wiederholt eingegeben werden müssen; die Durchführung von Untersuchungen und Analysen, die auf die Optimierung von Produkten, Diensten und Technologien abzielen.<br /><br />
-Die von Northstream Deutschland erfassten und verwendeten persönlichen Daten werden ausschließlich für den Betrieb und die Verbesserung der Websites und Dienste verwendet und ohne Ihre Einwilligung nicht Dritte weitergegeben. Ausnahmen: Northstream Deutschland kann zu folgenden Zwecken auf persönliche Informationen zugreifen oder diese weitergeben, einschließlich der Inhalte Ihrer Nachrichten: (a) zum Erfüllen von gesetzlichen Bestimmungen oder als Reaktion auf Klageschriften oder Gerichtsverfahren, (b) zum Schutz der Rechte oder des Eigentums von Northstream Deutschland und dessen Kunden, einschließlich der Durchsetzung von Vereinbarungen oder Richtlinien zur Verwendung der Dienste oder (c) zum Handeln in der begründeten Annahme, dass solche Schritte zum Schutz von unserer Mitarbeiter, Kunden oder der Öffentlichkeit eingeleitet werden müssen.<br /><br />
+Die Verwendung dieser Daten umfasst m&ouml;glicherweise das Bereitstellen eines effizienteren Kundenservices; die Vereinfachung der Nutzung der Websites oder Dienste, indem daf&uuml;r gesorgt wird, dass dieselben Informationen nicht wiederholt eingegeben werden m&uuml;ssen; die Durchf&uuml;hrung von Untersuchungen und Analysen, die auf die Optimierung von Produkten, Diensten und Technologien abzielen.<br /><br />
+Die von Northstream Deutschland erfassten und verwendeten pers&ouml;nlichen Daten werden ausschlie&szlig;lich f&uuml;r den Betrieb und die Verbesserung der Websites und Dienste verwendet und ohne Ihre Einwilligung nicht Dritte weitergegeben. Ausnahmen: Northstream Deutschland kann zu folgenden Zwecken auf pers&ouml;nliche Informationen zugreifen oder diese weitergeben, einschlie&szlig;lich der Inhalte Ihrer Nachrichten: (a) zum Erf&uuml;llen von gesetzlichen Bestimmungen oder als Reaktion auf Klageschriften oder Gerichtsverfahren, (b) zum Schutz der Rechte oder des Eigentums von Northstream Deutschland und dessen Kunden, einschlie&szlig;lich der Durchsetzung von Vereinbarungen oder Richtlinien zur Verwendung der Dienste oder (c) zum Handeln in der begr&uuml;ndeten Annahme, dass solche Schritte zum Schutz von unserer Mitarbeiter, Kunden oder der &ouml;ffentlichkeit eingeleitet werden m&uuml;ssen.<br /><br />
 </p>
 
 <a name="terms"></a>
 <h3>Nutzungsbedingungen</h3>
 
-<p>Die auf den Websites von Northstream Deutschland enthaltenen Links ermöglichen es Ihnen, die Website von Northstream Deutschland zu verlassen und zu anderen Websites zu springen. Diese anderen Websites werden nicht von Northstream Deutschland kontrolliert. Northstream Deutschland ist für Inhalte, Links, Änderungen oder Updates fremder Websites nicht verantwortlich oder haftbar. Northstream Deutschland stellt Ihnen die Links auf andere Websites nur zur Vereinfachung zur Verfügung und macht sich deren Inhalte durch diese Verknüpfung ("Hyperlinks") nicht zu eigen.<br /><br />
-Die Nutzung unserer Website und Dienste ist unter der Bedingung gestattet, dass Sie sie nicht für Zwecke verwenden, die rechtswidrig sind oder gegen diese Nutzungsbedingungen verstoßen. Sie dürfen nicht in einer Weise genutzt werden, die unsere Server oder die damit verbundenen Netzwerke schädigen, deaktivieren, überlasten oder beeinträchtigen könnten, oder die deren Nutzung durch Dritte beeinträchtigen könnten. Es ist Ihnen nicht gestattet, sich durch illegale Beschaffung von Kennwörtern oder sonstige Methoden unerlaubt Zugang zu Diensten, Accounts, Computersystemen oder mit diesen verbundenen Netzwerken zu verschaffen.<br /><br />
-Für die Geheimhaltung Ihres Kennworts sowie Ihres Kunden-Accounts sind ausschließlich Sie selbst verantwortlich. Sie erklären sich bereit, Northstream Deutschland unverzüglich über jeden nicht-autorisierten Zugang zu informieren. Northstream Deutschland haftet nicht für Schäden, die Ihnen daraus entstehen, dass Dritte Ihr Passwort oder Ihren Account mit oder ohne Ihre Kenntnis nutzen. Es ist Ihnen nicht gestattet, den Account eines Dritten ohne dessen Erlaubnis zu nutzen.<br /><br />
-Sämtliche Inhalte werden "wie besehen" und ohne Gewährleistung jeglicher Art zur Verfügung gestellt. Northstream Deutschland behält sich vor, jederzeit Verbesserungen oder Änderungen an den Inhalten vorzunehmen. Northstream Deutschland haftet nicht für direkte und indirekte Schäden, Folgeschäden oder sonstige Schäden, die aus Nutzungsausfall, Verlust von Daten oder entgangenem Gewinn resultieren - sei es bei vertragsgemäßer Nutzung oder durch Nachlässigkeit oder sonstige unerlaubte Handlung – und durch die oder im Zusammenhang mit der Verwendung von Software, Dokumenten oder Informationen entstanden sind.
+<p>Die auf den Websites von Northstream Deutschland enthaltenen Links erm&ouml;glichen es Ihnen, die Website von Northstream Deutschland zu verlassen und zu anderen Websites zu springen. Diese anderen Websites werden nicht von Northstream Deutschland kontrolliert. Northstream Deutschland ist f&uuml;r Inhalte, Links, &auml;nderungen oder Updates fremder Websites nicht verantwortlich oder haftbar. Northstream Deutschland stellt Ihnen die Links auf andere Websites nur zur Vereinfachung zur Verf&uuml;gung und macht sich deren Inhalte durch diese Verkn&uuml;pfung ("Hyperlinks") nicht zu eigen.<br /><br />
+Die Nutzung unserer Website und Dienste ist unter der Bedingung gestattet, dass Sie sie nicht f&uuml;r Zwecke verwenden, die rechtswidrig sind oder gegen diese Nutzungsbedingungen versto&szlig;en. Sie d&uuml;rfen nicht in einer Weise genutzt werden, die unsere Server oder die damit verbundenen Netzwerke sch&auml;digen, deaktivieren, &uuml;berlasten oder beeintr&auml;chtigen k&ouml;nnten, oder die deren Nutzung durch Dritte beeintr&auml;chtigen k&ouml;nnten. Es ist Ihnen nicht gestattet, sich durch illegale Beschaffung von Kennw&ouml;rtern oder sonstige Methoden unerlaubt Zugang zu Diensten, Accounts, Computersystemen oder mit diesen verbundenen Netzwerken zu verschaffen.<br /><br />
+F&uuml;r die Geheimhaltung Ihres Kennworts sowie Ihres Kunden-Accounts sind ausschlie&szlig;lich Sie selbst verantwortlich. Sie erkl&auml;ren sich bereit, Northstream Deutschland unverz&uuml;glich &uuml;ber jeden nicht-autorisierten Zugang zu informieren. Northstream Deutschland haftet nicht f&uuml;r Sch&auml;den, die Ihnen daraus entstehen, dass Dritte Ihr Passwort oder Ihren Account mit oder ohne Ihre Kenntnis nutzen. Es ist Ihnen nicht gestattet, den Account eines Dritten ohne dessen Erlaubnis zu nutzen.<br /><br />
+S&auml;mtliche Inhalte werden "wie besehen" und ohne Gew&auml;hrleistung jeglicher Art zur Verf&uuml;gung gestellt. Northstream Deutschland beh&auml;lt sich vor, jederzeit Verbesserungen oder &auml;nderungen an den Inhalten vorzunehmen. Northstream Deutschland haftet nicht f&uuml;r direkte und indirekte Sch&auml;den, Folgesch&auml;den oder sonstige Sch&auml;den, die aus Nutzungsausfall, Verlust von Daten oder entgangenem Gewinn resultieren - sei es bei vertragsgem&auml;&szlig;er Nutzung oder durch Nachl&auml;ssigkeit oder sonstige unerlaubte Handlung – und durch die oder im Zusammenhang mit der Verwendung von Software, Dokumenten oder Informationen entstanden sind.
 </p>
 
 </div><!-- close left -->
 
 <div id="right">
 
-<h3>Kurzmitteilungen</h3>
+    <h3>Kurzmitteilungen</h3>
 
-<ul class="pane-list">
+    <ul class="pane-list">
 
-<li><img src="images/thumb1.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Sicherheitskritische Anwendung für Smartphones und Mobile Devices</h2>
-<p class="product_text">Northstream entwickelt neuartige sicherheitskritische Gesichtserkennungsanwendung für Smartphones..</p>
-</li>
+        <li>
+            <img src="images/thumb-biztalk.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Biztalk Summit 2014</h2>
+            <p class="product_text">Die diesj&auml;hrige "INTEGRATE 2014", die wichtigste Fach&shy;veranstaltung f&uuml;r Biztalk-Nutzer, findet vom 3. bis 5. Dezember am Microsoft Campus in Washington statt.</p>
+        </li>
 
-<li><img src="images/thumb2.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Rekordumsatz im 4. Quartal 2012</h2>
-<p class="product_text">Northstream Deutschland hat das 4. Quartal 2012 er&shy;neut mit einem neuen Konzern-Rekordumsatz und Gewinn ab&shy;geschlossen.</p>
-</li>
+        <li>
+            <img src="images/thumb-vs.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Visual Studio 2015</h2>
+            <p class="product_text">Microsoft ver&ouml;ffentlich weitere <a href="http://blogs.msdn.com/b/visualstudio/archive/2014/08/18/visual-studio-14-ctp-3-released.aspx"> CTP f&uuml;r die Version 14</a> ihrer Integrierten Entwicklungsumgebung. Final Release m&ouml;glicherweise noch in diesem Jahr.</p>
+        </li>
 
-<li><img src="images/thumb3.png" width="46" height="46" alt="News" />
-<h2 class="latest_products_heading">Volkswagen vergibt Forschungsauftrag</h2>
-<p class="product_text">Der Volkswagen-Konzern in Wolfsburg hat eine Mach&shy;bar&shy;keits&shy;studie für ein Geo-Tracking Verfahren in Auftrag gegeben.</p>
-</li>
+        <li>
+            <img src="images/thumb-sharepoint.png" width="46" height="46" alt="News" />
+            <h2 class="latest_products_heading">Sharepoint Conference auf Channel 9</h2>
+            <p class="product_text">Videomitschnitte der diesj&auml;hrigen Sharepoint-Konferenz mit aktuellen Themen wie Cloud oder Office365 Integra&shy;tion auf <a href="http://channel9.msdn.com/Events/SharePoint-Conference/2014">Channel 9</a>.</p>
+        </li>
 
-</ul>
+    </ul>
 
-<h3>Get In Touch</h3>
-<div id="contact_container">
-<span>Contact Customer Care Service</span><br />
-<script type="text/javascript">var link=decmail("BB5-FR3MUWyRxW@x9UWd5WURMy.FR","HO1Ntskp0qcj7fauT2bLFnlvhADyregKoW5z3IQBXiZMP46VGwxESdCJYUR8m9");var text=decmail("aGciJEmO a9Om PmK9OiEmAi","7fACwtrzFcGXq4JyvmPIdVR8lpga2iOHhY30Uj5knEWZ6QbsuK19oxNeDSTBLM");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
-<span>News &amp; Press Information Service</span><br />
-<script type="text/javascript">var link=decmail("4Y-ts4qYF3s1F@18YFLPFYsq3.ts","hSJciRU2Wmutpf17oG0kBzs5NZIjLQOarlbwD3yF4VH98dgvnKPEMCX6eTxqYA");var text=decmail("VTod6i 7cdOj6nFp qc4OEjbcFj","a0hu3wjP2WXIiqEdkCnZeSv1G4bOLzTNRsVYx9U6gtfKAF8cDrl5BoyMJQH7pm");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations Department</noscript><br /><br />
-<span>Job offers &amp; Recruitment</span><br />
-<script type="text/javascript">var link=decmail("LZH-qZYnLWKZpW@pyLW3uWLZnK.qZ","PAMpftVadwL3TQZbBci4S7NlJomuOv0xY9WGnqRF6U8rhgHeEDjkz2yKIX15sC");var text=decmail("Yw9ZMzv6w3v rwhNZv6w3v","OxI5zjVFY794H3pSWD1mdTQUAlBaG8tJoqKehfurk6gCisL2RNc0vnEPywbXMZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment Department</noscript><br /><br />
-<span>Senior Technical Lead</span><br />
-<script type="text/javascript">var link=decmail("cz0tt0L.UNE09F0UI@Ly9zUcz90NF.u0","eZnAKV6yEruPsaRXMlHkmY4thjSCG5Q10qLgvobpd9DOcNWi2IT7FfBzU8Jwx3");var text=decmail("oK. 3v5665Y B. CHW5Kc5nP","YaVqJ7BdO3tmpWhx0UlejozgLHw2Af4uQrvcyTnXNEP5GkIS9CFbs61RiK8MDZ");document.write("<a href='mailto:"+link+"'>"+text+"</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Contact our Technical Lead</noscript><br /><br />
-</div><!-- close form_container -->
+    <h3>Get in Touch</h3>
+    <div id="contact_container">
+        <span>Sie sind bereits Kunde?</span><br />
+        <script type="text/javascript">var link = decmail("WsuBFAGk-us00FkB@hFkBnuBkG4A.lG", "XGEFuy6W9bZH4Rf1YkqLxvBmiVUdph2OeMos7IcTNSCawg35rJjQztADK8l0nP"); document.write("<a href='mailto:" + link + "'>Customer Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Customer Care Department</noscript><br /><br />
+        <span>Sie haben eine allgemeine Frage?</span><br />
+        <script type="text/javascript">var link = decmail("ezPXRW-CpXSLRjFx@FjCLGxLCpSJ.Yp", "JU6dPo9KxFg0QqNzGVWMiAaXfCB7pLDmIEYbjHOsn321Twuhvc5RZSl4r8kety"); document.write("<a href='mailto:" + link + "'>Public Relations</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Public Relations</noscript><br /><br />
+        <span>Sie haben eine technische Anfrage?</span><br />
+        <script type="text/javascript">var link = decmail("0pwaPrwsc-VBJJiK0@PiK0aV0KpsM.Up", "1R2Yg7WAtMIqUZLHFpDvhisK4cBnTkNyG3QOSECm0bdxX8fe5J6oarVluw9Pzj"); document.write("<a href='mailto:" + link + "'>Technical Support</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Technical Support</noscript><br /><br />
+        <span>Sie m&ouml;chten sich bewerben?</span><br />
+        <script type="text/javascript">var link = decmail("luRZ@tu3c9Zc3kxw.yk", "ZjdQ6hEFzOXvKRtTHLAelymJ94iC58aDGcrIoSkUBw1sN0fVpxYgM37ubnWP2q"); document.write("<a href='mailto:" + link + "'>Recruitment</a>");</script><noscript><a href="noscript.html" target="noscript"></a>Recruitment</noscript><br /><br />
+    </div><!-- close contact_container -->
+
 
 <h3>Customer Login</h3>
 
 <div id="form_container">
-<form action="clogin.html" target="iflogin" method="post" id="commentform">
+<form action="clogin" target="iflogin" method="post" id="commentform">
 <fieldset>
 
 <p><input type="text" name="email" id="email" class="input_bg" value="" size="22" tabindex="1" />
@@ -205,7 +207,7 @@ Sämtliche Inhalte werden "wie besehen" und ohne Gewährleistung jeglicher Art z
 <p><input type="password" name="pw" id="pw" class="input_bg" value="" size="22" tabindex="2" />
 <label for="pw"><small>Password</small></label></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="$('#login-status').text('Try to login. Please wait ...');logintimer=setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 20000);" /><span id="login-status"></span></p>
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Login" onclick="clearTimeout(logintimer); $('#login-status').removeClass('failed').text('Try to login. Please wait ...'); logintimer = setTimeout('ShowMessage(\'Login failed.\', \'failed\');', 10000); return false;" /><span id="login-status"></span></p>
 
 </fieldset>
 </form>
