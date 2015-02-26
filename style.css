@@ -288,7 +288,11 @@ h2.latest_products_heading {font-size: .8em; font-weight: bold; color: #333; mar
 
 h2.single_line {margin-top: 2px}
 
-.product_text {font-size: .7em; line-height: 1.1em; padding: 0}
+.product_text {
+	font-size: .7em; 
+	line-height: 1.0em; 
+	padding: 0
+}
 
 /* hover divs (pane list) */
 
