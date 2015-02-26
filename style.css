@@ -239,7 +239,7 @@ fieldset {padding: 5px 20px;}
 	font-size: .9em;
     padding: 8px 20px;
     width: 694px;
-    background-color: #000;
+    background-color: #222;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
 	-khtml-opacity: 0.8;
@@ -250,6 +250,9 @@ fieldset {padding: 5px 20px;}
 }
 .slider1Image h2 {
     line-height: 1em;
+}
+.frontpage span {
+background-color: #256797;
 }
 .slider1Image a {
     float: right; 
@@ -285,7 +288,7 @@ h2.latest_products_heading {font-size: .8em; font-weight: bold; color: #333; mar
 
 h2.single_line {margin-top: 2px}
 
-.product_text {font-size: .7em; line-height: .9em; padding: 0}
+.product_text {font-size: .7em; line-height: 1.1em; padding: 0}
 
 /* hover divs (pane list) */
 

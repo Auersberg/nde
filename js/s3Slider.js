@@ -63,7 +63,7 @@
                                 }
                             });
                         } else {
-                            $(itemsSpan[currNo]).slideDown((timeOut/6), function() {
+                            $(itemsSpan[currNo]).slideDown((timeOut/12), function() {
                                 faderStat = false;
                                 current = items[currNo];
                                 if(!mOver) {
@@ -76,7 +76,7 @@
             } else {
                 if(!mOver) {
                     if($(itemsSpan[currNo]).css('bottom') == 0) {
-                        $(itemsSpan[currNo]).slideDown((timeOut/6), function() {
+                        $(itemsSpan[currNo]).slideDown((timeOut/12), function() {
                             $(items[currNo]).fadeOut((timeOut/6), function() {
                                 faderStat = true;
                                 current = items[(currNo+1)];
@@ -86,8 +86,8 @@
                             });
                         });
                     } else {
-                        $(itemsSpan[currNo]).slideUp((timeOut/6), function() {
-                        $(items[currNo]).fadeOut((timeOut/6), function() {
+                        $(itemsSpan[currNo]).slideUp((timeOut/12), function() {
+                        $(items[currNo]).fadeOut((timeOut/12), function() {
                                 faderStat = true;
                                 current = items[(currNo+1)];
                                 if(!mOver) {
