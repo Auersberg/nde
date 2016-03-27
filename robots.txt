@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /clogin.html
+Disallow: /customers.html
+Disallow: /legal.html
+Disallow: /noscript.html
+Disallow: /products.html
+Disallow: /services.html
