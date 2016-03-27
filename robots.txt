@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /clogin.html
 Disallow: /customers.html
 Disallow: /legal.html
+Disallow: /legals.html
 Disallow: /noscript.html
 Disallow: /products.html
 Disallow: /services.html
